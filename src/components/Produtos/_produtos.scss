@@ -1,0 +1,39 @@
+.lancamentos {
+    padding: 1rem;
+    .titulo {
+        padding: 1rem 0;
+        font-size: 16px;
+        font-weight: normal;
+    }
+    .slider {
+        .card {
+            padding-right: 1rem;
+            padding-bottom: 2rem;
+            .card-img {
+                background-size: cover;
+                width: 40vw;
+                height: 40vw;
+                padding: .5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-end;
+                .img {
+                    width: 100%;
+                }
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            &-descricao {
+                padding: 1rem 0;
+                font-size: 12px;
+                font-weight: lighter;
+            }
+            &-preco {
+                font-size: 14px;
+            }
+        }
+    }
+}

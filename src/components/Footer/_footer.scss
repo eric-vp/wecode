@@ -1,0 +1,47 @@
+.footer {
+    width: 100%;
+    background: #B11B26;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 1.5rem 0 4rem 0;
+    svg {
+        width: 100%;
+        height: 100%;
+        path {
+            fill: #FFE9DC;
+        }
+    }
+    .social-media {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        list-style: none;
+        a {
+            color: #FFE9DC;
+            cursor: pointer;
+            i {
+                font-size: 24px;
+            }
+        }
+    }
+    .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: .8rem;
+        }
+        a {
+            color: inherit;
+            cursor: pointer;
+            text-decoration: underline;
+            font-size: 14px;
+            margin-bottom: .5rem;
+        }
+    }
+}

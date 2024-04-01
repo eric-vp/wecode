@@ -1,0 +1,20 @@
+.slider {
+    .banner-img {
+        width: 100%;
+    }
+    .slick-dots {
+        top: 650px;
+        left: 130px;
+    }
+    .botao {
+        font-size: 14px;
+        background-color: rgba($color: #fff, $alpha: 0.3);
+        backdrop-filter: blur(6px);
+        border: 1px solid white;
+        padding: .8rem 1.5rem;
+        color: white;
+        position: fixed;
+        bottom: 40px;
+        margin-left: 20px;
+    }
+}

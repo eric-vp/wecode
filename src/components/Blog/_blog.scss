@@ -1,0 +1,40 @@
+.blog {
+    background: #F7F7F7;
+    padding: 2rem 1rem 4rem 1rem;
+    .titulo {
+        font-size: 16px;
+        margin-bottom: 1rem;
+    }
+    .texto {
+        color: #8A8A8A;
+        font-style: italic;
+        font-size: 12px;
+        padding-bottom: 1.5rem;
+    }
+    .slider {
+        .card{
+            &-img {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            &-titulo {
+                font-size: 16px;
+                margin-bottom: 1rem;
+            }
+            &-paragrafo {
+                font-size: 12px;
+                color: #8A8A8A;
+                margin-bottom: 1rem;
+            }
+            a {
+                font-size: 12px;
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    }
+    .slick-dots {
+        top: 380px;
+        left: 130px;
+    }
+}
