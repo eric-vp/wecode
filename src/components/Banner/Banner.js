@@ -34,7 +34,7 @@ function Banner() {
     };
     return (
         <>
-            <Slider {...settings} className='slider'>
+            <Slider {...settings} className='slider-banner'>
                 {banners.map(banner => {
                     return (
                         <div>
