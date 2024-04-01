@@ -2,9 +2,6 @@
     .banner-img {
         width: 100%;
     }
-    .slick-dots {
-        bottom: 20px;
-    }
     .botao {
         font-size: 14px;
         background-color: rgba($color: #fff, $alpha: 0.3);
@@ -12,8 +9,8 @@
         border: 1px solid white;
         padding: .8rem 1.5rem;
         color: white;
-        position: fixed;
-        bottom: 40px;
+        position: relative;
+        bottom: 4rem;
         margin-left: 20px;
     }
 }

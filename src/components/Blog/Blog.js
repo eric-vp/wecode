@@ -1,9 +1,9 @@
-import Slider from "react-slick";
 import blog1 from "../../assets/blog/blog-1.png";
 import blog2 from "../../assets/blog/blog-2.png";
 import blog3 from "../../assets/blog/blog-3.png";
-
 import '../Blog/_blog.scss';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 function Blog() {
     const cardsBlog = [
@@ -27,27 +27,30 @@ function Blog() {
         }
     ]
 
-    var settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    };
     return (
         <section className="blog">
             <h3 className="titulo">Conheça mais</h3>
             <p className="texto">Fique por dentro de tudo que acontece na Bebecê.</p>
-            <Slider {...settings} className="slider">
+            <Swiper
+                spaceBetween={0}
+                slidesPerView={1}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+                loop={true}
+            >
                 {cardsBlog.map(card => {
-                    return(<div className="card">
-                        <a href="/#"><img className='card-img' src={card['src']} alt={card['alt']} /></a>
-                        <h4 className="card-titulo">{card['titulo']}</h4>
-                        <p className="card-paragrafo">{card['paragrafo']}</p>
-                        <a href="/#">Saiba mais!</a>
-                    </div>)
+                    return (
+                        <SwiperSlide className="slider">
+                            <div className="card">
+                                <a href="/#"><img className='card-img' src={card['src']} alt={card  ['alt']} /></a>
+                                <h4 className="card-titulo">{card['titulo']}</h4>
+                                <p className="card-paragrafo">{card['paragrafo']}</p>
+                                <a href="/#">Saiba mais!</a>
+                            </div>
+                        </SwiperSlide>
+                    )
                 })}
-            </Slider>
+            </Swiper>
         </section>
     )
 }

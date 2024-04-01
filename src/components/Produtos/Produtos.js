@@ -1,10 +1,12 @@
-import Slider from "react-slick";
 import produto1 from "../../assets/produtos/produto-1.png";
 import produto2 from "../../assets/produtos/produto-2.png";
 import produto3 from "../../assets/produtos/produto-3.png";
 
 import '../Produtos/_produtos.scss';
 import ProdutosImg from "./ProdutosImg";
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 function Produtos({count, setCount, notify}) {
     const produtos = [
@@ -28,30 +30,34 @@ function Produtos({count, setCount, notify}) {
         }
     ]
 
-    var settings = {
-        infinite: true,
-        speed: 500,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-    };
     return (
         <section className="lancamentos">
             <h3 className="titulo">Lançamentos</h3>
-            <Slider {...settings} className="slider">
+            <Swiper
+                spaceBetween={0}
+                slidesPerView={2}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+                loop={true}
+            >
                 {produtos.map(produto => {
-                    return (<div className="card">
-                        <ProdutosImg 
-                            src={produto['src']}
-                            alt={produto['alt']}
-                            count={count}
-                            setCount={setCount}
-                            notify={notify}
-                        />
-                        <a href="/#"><p className="card-descricao">{produto['descricao']}</p></a>
-                        <p className="card-preco">{produto['preco']}</p>
-                    </div>)
+                    return (
+                        <SwiperSlide className="slider">
+                            <div className="card">
+                                <ProdutosImg
+                                    src={produto['src']}
+                                    alt={produto['alt']}
+                                    count={count}
+                                    setCount={setCount}
+                                    notify={notify}
+                                    />
+                                <a href="/#"><p className="card-descricao">{produto['descricao']}   </ p></a>
+                                <p className="card-preco">{produto['preco']}</p>
+                            </div>
+                        </SwiperSlide>
+                    )
                 })}
-            </Slider>
+            </Swiper>
         </section>
     )
 }

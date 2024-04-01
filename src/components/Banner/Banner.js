@@ -2,12 +2,9 @@ import banner1 from '../../assets/banner/banner-principal-1.png';
 import banner2 from '../../assets/banner/banner-principal-2.png';
 import banner3 from '../../assets/banner/banner-principal-3.png';
 import './_banner.scss';
-
 import React from "react";
-import Slider from "react-slick";
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 function Banner() {
     const banners = [
@@ -24,27 +21,27 @@ function Banner() {
             alt: "Par de saltos na cor preta"
         },
     ]
-
-    var settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    };
     return (
-        <>
-            <Slider {...settings} className='slider-banner'>
+        <div className='slider-banner'>
+            <Swiper
+                spaceBetween={0}
+                slidesPerView={1}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+                loop={true}
+            >
                 {banners.map(banner => {
                     return (
-                        <div>
-                            <img className='banner-img' src={banner['src']} alt={banner['alt']} />
-                            <a href='/#' className='botao'>Conheça agora!</a>
-                        </div>
+                        <SwiperSlide>
+                            <div>
+                                <img className='banner-img' src={banner['src']} alt={banner ['alt']} />
+                                <a href='/#' className='botao'>Conheça agora!</a>
+                            </div>
+                        </SwiperSlide>
                     )
                 })}
-            </Slider>
-        </>
+            </Swiper>
+        </div>
     );
 }
 
