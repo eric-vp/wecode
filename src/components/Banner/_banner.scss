@@ -1,14 +1,17 @@
+@use '../../index';
+
 .slider-banner {
     .banner-img {
         width: 100%;
     }
     .botao {
-        font-size: 14px;
-        background-color: rgba($color: #fff, $alpha: 0.3);
+        @include index.fs-fw-cl(
+            14px, normal , white
+        );
+        background-color: rgba($color: white, $alpha: 0.3);
         backdrop-filter: blur(6px);
         border: 1px solid white;
         padding: .8rem 1.5rem;
-        color: white;
         position: relative;
         bottom: 4rem;
         margin-left: 20px;

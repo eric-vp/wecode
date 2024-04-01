@@ -1,6 +1,8 @@
+@use '../../index';
+
 .footer {
     width: 100%;
-    background: #B11B26;
+    background: var(--bebece-vermelho);
     color: white;
     display: flex;
     flex-direction: column;
@@ -10,7 +12,7 @@
         width: 100%;
         height: 100%;
         path {
-            fill: #FFE9DC;
+            fill: var(--bebece-bege);
         }
     }
     .social-media {
@@ -19,7 +21,7 @@
         gap: 1rem;
         list-style: none;
         a {
-            color: #FFE9DC;
+            color: var(--bebece-bege);
             cursor: pointer;
             i {
                 font-size: 24px;
@@ -32,15 +34,13 @@
         justify-content: center;
         align-items: center;
         p {
-            font-weight: bold;
-            font-size: 16px;
+            @include index.fs-fw-cl(16px, bold, white);
             margin-bottom: .8rem;
         }
         a {
-            color: inherit;
+            @include index.fs-fw-cl(14px, normal, inherit);
             cursor: pointer;
             text-decoration: underline;
-            font-size: 14px;
             margin-bottom: .5rem;
         }
     }
