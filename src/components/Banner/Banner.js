@@ -26,15 +26,13 @@ function Banner() {
             <Swiper
                 spaceBetween={0}
                 slidesPerView={1}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
                 loop={true}
             >
                 {banners.map(banner => {
                     return (
                         <SwiperSlide>
                             <div>
-                                <img className='banner-img' src={banner['src']} alt={banner ['alt']} />
+                                <img className='banner-img' src={banner['src']} alt={banner['alt']} />
                                 <a href='/#' className='botao'>Conheça agora!</a>
                             </div>
                         </SwiperSlide>

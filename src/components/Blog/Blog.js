@@ -34,15 +34,13 @@ function Blog() {
             <Swiper
                 spaceBetween={0}
                 slidesPerView={1}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
                 loop={true}
             >
                 {cardsBlog.map(card => {
                     return (
                         <SwiperSlide className="slider">
                             <div className="card">
-                                <a href="/#"><img className='card-img' src={card['src']} alt={card  ['alt']} /></a>
+                                <a href="/#"><img className='card-img' src={card['src']} alt={card['alt']} /></a>
                                 <h4 className="card-titulo">{card['titulo']}</h4>
                                 <p className="card-paragrafo">{card['paragrafo']}</p>
                                 <a href="/#">Saiba mais!</a>

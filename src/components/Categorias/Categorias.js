@@ -38,8 +38,6 @@ function Categorias() {
             <Swiper
                 spaceBetween={0}
                 slidesPerView={2}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
                 loop={true}
             >
                 {cardsCategorias.map(card => {
@@ -47,7 +45,7 @@ function Categorias() {
                         <SwiperSlide className='slider'>
                             <div className="card">
                                 <a href="/#">
-                                    <img className='card-img' src={card['src']} alt={card   ['alt']} />
+                                    <img className='card-img' src={card['src']} alt={card['alt']} />
                                     <h4>{card['titulo']}</h4>
                                 </a>
                             </div>
